@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace Banque.ihm
 {
+    [Serializable]
     public class Compte
     {
         private int num;
@@ -36,6 +37,7 @@ namespace Banque.ihm
             {
                 return num;
             }
+            
         }
 
         public string Description
@@ -60,6 +62,8 @@ namespace Banque.ihm
             {
                 return decouvert;
             }
+
+            
         }
 
         public double Solde

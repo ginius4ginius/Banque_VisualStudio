@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Banque.ihm
 {
+    [Serializable]
     public class Client
     {
         private int num;

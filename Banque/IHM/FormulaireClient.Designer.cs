@@ -1,5 +1,6 @@
 ﻿namespace Banque
 {
+
     partial class FormulaireClient
     {
         /// <summary>

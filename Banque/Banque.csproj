@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,30 +47,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="BLL\Manager.cs" />
+    <Compile Include="DAL\Dao.cs" />
+    <Compile Include="IHM\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="IHM\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormulaireClient.cs">
+    <Compile Include="IHM\FormulaireClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormulaireClient.Designer.cs">
+    <Compile Include="IHM\FormulaireClient.Designer.cs">
       <DependentUpon>FormulaireClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="ihm\Client.cs" />
-    <Compile Include="ihm\Compte.cs" />
-    <Compile Include="metier\Dao.cs" />
-    <Compile Include="metier\LessException.cs" />
-    <Compile Include="metier\TypeException.cs" />
-    <Compile Include="metier\EmptyException.cs" />
+    <Compile Include="BO\Client.cs" />
+    <Compile Include="BO\Compte.cs" />
+    <Compile Include="DAL\MysqlDao.cs" />
+    <Compile Include="BO\exception\LessException.cs" />
+    <Compile Include="BO\exception\TypeException.cs" />
+    <Compile Include="BO\exception\EmptyException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="IHM\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormulaireClient.resx">
+    <EmbeddedResource Include="IHM\FormulaireClient.resx">
       <DependentUpon>FormulaireClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
