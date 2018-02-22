@@ -173,9 +173,12 @@ namespace Banque
             formulaire.tb1.Text = clt.Nom;
             formulaire.tb2.Text = clt.Prenom;
             formulaire.tb3.Text = clt.Adresse;
+            formulaire.tb.Text = proprioNum.ToString();
+            this.Hide();
+            formulaire.Show();
 
-            formulaire.ShowDialog(this);
+        
 
-        }
+    }
     }
 }

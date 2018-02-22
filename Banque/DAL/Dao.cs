@@ -13,7 +13,7 @@ namespace Banque.model
         
         MySqlDataReader recuperationDonnees();
         DataTable affichageDonnee(MySqlDataReader dr);
-        void modificationAdresse();
+        void modificationAdresse(string adresse,int num);
         void openConnection();
         void closeConnection();
         void modificationDecouvert(double id, double nbr);

@@ -36,12 +36,14 @@
             this.tb2 = new System.Windows.Forms.TextBox();
             this.tb3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tb = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 28);
+            this.label1.Location = new System.Drawing.Point(22, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 0;
@@ -50,7 +52,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 70);
+            this.label2.Location = new System.Drawing.Point(22, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 1;
@@ -59,7 +61,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 107);
+            this.label3.Location = new System.Drawing.Point(25, 133);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 2;
@@ -67,7 +69,7 @@
             // 
             // tb1
             // 
-            this.tb1.Location = new System.Drawing.Point(80, 28);
+            this.tb1.Location = new System.Drawing.Point(80, 50);
             this.tb1.Name = "tb1";
             this.tb1.ReadOnly = true;
             this.tb1.Size = new System.Drawing.Size(100, 20);
@@ -75,7 +77,7 @@
             // 
             // tb2
             // 
-            this.tb2.Location = new System.Drawing.Point(80, 70);
+            this.tb2.Location = new System.Drawing.Point(80, 91);
             this.tb2.Name = "tb2";
             this.tb2.ReadOnly = true;
             this.tb2.Size = new System.Drawing.Size(100, 20);
@@ -83,7 +85,7 @@
             // 
             // tb3
             // 
-            this.tb3.Location = new System.Drawing.Point(80, 107);
+            this.tb3.Location = new System.Drawing.Point(80, 133);
             this.tb3.Name = "tb3";
             this.tb3.Size = new System.Drawing.Size(100, 20);
             this.tb3.TabIndex = 5;
@@ -98,11 +100,30 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(25, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Numéro Client :";
+            // 
+            // tb
+            // 
+            this.tb.Location = new System.Drawing.Point(137, 13);
+            this.tb.Name = "tb";
+            this.tb.ReadOnly = true;
+            this.tb.Size = new System.Drawing.Size(43, 20);
+            this.tb.TabIndex = 8;
+            // 
             // FormulaireClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(228, 211);
+            this.Controls.Add(this.tb);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tb3);
             this.Controls.Add(this.tb2);
@@ -126,5 +147,7 @@
         public System.Windows.Forms.TextBox tb2;
         public System.Windows.Forms.TextBox tb3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox tb;
     }
 }

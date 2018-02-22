@@ -8,6 +8,7 @@ using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Banque.Controleur
 {
@@ -100,6 +101,15 @@ namespace Banque.Controleur
 
         }
 
+        public void modifierAdresse(string adresse,int num)
+        {
+            MysqlDao sql = MysqlDao.getInstance("localhost", "banque", "root", "");
+            sql.openConnection();
+            sql.modificationAdresse(adresse,num);
+            sql.FermeturedataReader();
+            sql.closeConnection();
 
-    }
+
+        }
+}
 }

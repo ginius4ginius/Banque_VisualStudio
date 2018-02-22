@@ -96,7 +96,7 @@ namespace Banque.metier
             {
                 
                 //construction de la commande sql
-                cmd = connect.reqExec("select compte.num as numero_compte, solde, decouvert, nom  from compte join client on client.num = compte.proprio ");
+                cmd = connect.reqExec("select compte.num as numero_compte, solde, decouvert, nom,adresse  from compte join client on client.num = compte.proprio ");
                 dr = cmd.ExecuteReader();
 
 
@@ -141,9 +141,12 @@ namespace Banque.metier
             this.dr.Close();
         }
 
-        public void modificationAdresse()
+        public void modificationAdresse(string adresse,int num)
         {
-            throw new NotImplementedException();
+            string req = "update client set adresse = '"+adresse+"' where num  = " + num + ";";
+            cmd = connect.reqExec(req);
+            dr = cmd.ExecuteReader();
+            dr.Read();
         }
 
         public void modificationDecouvert(double id, double nbr)
@@ -234,7 +237,8 @@ namespace Banque.metier
             int numeroClient = Convert.ToInt16(dr.GetValue(0).ToString());
             return numeroClient;
         }
+        }
 
     }
 
-}
+
