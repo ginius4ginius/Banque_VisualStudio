@@ -40,8 +40,6 @@
             this.tb = new System.Windows.Forms.TextBox();
             this.bt = new System.Windows.Forms.Button();
             this.dataGd = new System.Windows.Forms.DataGridView();
-            this.tb2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGd)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +53,8 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(563, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(751, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -65,20 +64,20 @@
             this.créditerToolStripMenuItem,
             this.débiterToolStripMenuItem});
             this.opérationToolStripMenuItem.Name = "opérationToolStripMenuItem";
-            this.opérationToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.opérationToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.opérationToolStripMenuItem.Text = "Opération";
             // 
             // créditerToolStripMenuItem
             // 
             this.créditerToolStripMenuItem.Name = "créditerToolStripMenuItem";
-            this.créditerToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.créditerToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
             this.créditerToolStripMenuItem.Text = "Créditer";
             this.créditerToolStripMenuItem.Click += new System.EventHandler(this.créditerToolStripMenuItem_Click);
             // 
             // débiterToolStripMenuItem
             // 
             this.débiterToolStripMenuItem.Name = "débiterToolStripMenuItem";
-            this.débiterToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.débiterToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
             this.débiterToolStripMenuItem.Text = "Débiter";
             this.débiterToolStripMenuItem.Click += new System.EventHandler(this.DebiterToolStripMenuItem_Click);
             // 
@@ -88,50 +87,53 @@
             this.découvertToolStripMenuItem,
             this.clientToolStripMenuItem});
             this.modificationToolStripMenuItem.Name = "modificationToolStripMenuItem";
-            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
             this.modificationToolStripMenuItem.Text = "Modification";
             // 
             // découvertToolStripMenuItem
             // 
             this.découvertToolStripMenuItem.Name = "découvertToolStripMenuItem";
-            this.découvertToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.découvertToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.découvertToolStripMenuItem.Text = "Découvert";
             this.découvertToolStripMenuItem.Click += new System.EventHandler(this.DecouvertToolStripMenuItem_Click);
             // 
             // clientToolStripMenuItem
             // 
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.clientToolStripMenuItem.Text = "Client";
             this.clientToolStripMenuItem.Click += new System.EventHandler(this.clientToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(79, 221);
+            this.label.Location = new System.Drawing.Point(106, 282);
+            this.label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(0, 13);
+            this.label.Size = new System.Drawing.Size(0, 17);
             this.label.TabIndex = 2;
             // 
             // tb
             // 
-            this.tb.Location = new System.Drawing.Point(191, 218);
+            this.tb.Location = new System.Drawing.Point(257, 282);
+            this.tb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb.Name = "tb";
-            this.tb.Size = new System.Drawing.Size(100, 20);
+            this.tb.Size = new System.Drawing.Size(132, 22);
             this.tb.TabIndex = 3;
             // 
             // bt
             // 
-            this.bt.Location = new System.Drawing.Point(127, 266);
+            this.bt.Location = new System.Drawing.Point(291, 323);
+            this.bt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt.Name = "bt";
-            this.bt.Size = new System.Drawing.Size(128, 36);
+            this.bt.Size = new System.Drawing.Size(171, 44);
             this.bt.TabIndex = 4;
             this.bt.UseVisualStyleBackColor = true;
             this.bt.Click += new System.EventHandler(this.bt_Click);
@@ -139,42 +141,24 @@
             // dataGd
             // 
             this.dataGd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGd.Location = new System.Drawing.Point(13, 28);
+            this.dataGd.Location = new System.Drawing.Point(17, 34);
+            this.dataGd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGd.Name = "dataGd";
-            this.dataGd.Size = new System.Drawing.Size(538, 184);
+            this.dataGd.Size = new System.Drawing.Size(717, 226);
             this.dataGd.TabIndex = 7;
-            // 
-            // tb2
-            // 
-            this.tb2.Location = new System.Drawing.Point(191, 242);
-            this.tb2.Name = "tb2";
-            this.tb2.ReadOnly = true;
-            this.tb2.Size = new System.Drawing.Size(100, 20);
-            this.tb2.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 242);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Découvert autorisé : ";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 309);
+            this.ClientSize = new System.Drawing.Size(751, 380);
             this.Controls.Add(this.dataGd);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tb2);
             this.Controls.Add(this.bt);
             this.Controls.Add(this.tb);
             this.Controls.Add(this.label);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Gestion Comptes";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -200,8 +184,6 @@
         private System.Windows.Forms.TextBox tb;
         private System.Windows.Forms.Button bt;
         public System.Windows.Forms.DataGridView dataGd;
-        private System.Windows.Forms.TextBox tb2;
-        private System.Windows.Forms.Label label1;
     }
 }
 

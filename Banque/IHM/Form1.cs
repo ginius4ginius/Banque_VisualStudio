@@ -54,12 +54,13 @@ namespace Banque
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //manager.chargement(lstcpt);
+            
 
             label.Text = "Créditer : ";
             bt.Text = "Valider le crédit";
-            tb2.Text = "0";
+          //  tb2.Text = "0";
 
+            //chargement du datagridView grace à la méthode affichage du manager.
             table = manager.affichage();
             dataGd.DataSource = table;
             
@@ -136,6 +137,10 @@ namespace Banque
                     if (Double.Parse(tb.Text) < 0)
                     {
                         MessageBox.Show("Erreur: le montant ne doit pas être inférieur à 0.");
+                        tb.Clear();
+                    }else if (Double.Parse(tb.Text) < -Convert.ToDouble(dataGd.CurrentRow.Cells[1].Value))
+                    {
+                        MessageBox.Show("Erreur: solde inférieur au découvert.");
                         tb.Clear();
                     }
                     else {
