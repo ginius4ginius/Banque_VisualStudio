@@ -15,6 +15,7 @@ namespace Banque.Controleur
     class Manager
     {
         public DataTable table = new DataTable();
+        MysqlDao sql = MysqlDao.getInstance("localhost", "banque", "root", "");
 
         public void sauvegarde(List<Compte> lstcpt)
         {
@@ -37,54 +38,40 @@ namespace Banque.Controleur
 
         public DataTable affichage()
         {
-            MysqlDao sql = MysqlDao.getInstance("localhost", "banque", "root", "");
-            sql.openConnection();
+            
             table = sql.affichageDonnee(sql.recuperationDonnees());
             sql.FermeturedataReader();
-            sql.closeConnection();
             return table;
         }
 
         public void crediter(double id, double nbr)
         {
-            MysqlDao sql = MysqlDao.getInstance("localhost", "banque", "root", "");
-            sql.openConnection();
             sql.creditCompte(id, nbr);
             sql.FermeturedataReader();
             table = sql.affichageDonnee(sql.recuperationDonnees());
             sql.FermeturedataReader();
-            sql.closeConnection();
         }
 
         public void debiter(double id, double nbr)
         {
-            MysqlDao sql = MysqlDao.getInstance("localhost", "banque", "root", "");
-            sql.openConnection();
             sql.debitCompte(id, nbr);
             sql.FermeturedataReader();
             table = sql.affichageDonnee(sql.recuperationDonnees());
             sql.FermeturedataReader();
-            sql.closeConnection();
         }
 
         public void decouvert(double id, double nbr)
         {
-            MysqlDao sql = MysqlDao.getInstance("localhost", "banque", "root", "");
-            sql.openConnection();
             sql.modificationDecouvert(id, nbr);
             sql.FermeturedataReader();
             table = sql.affichageDonnee(sql.recuperationDonnees());
             sql.FermeturedataReader();
-            sql.closeConnection();
         }
 
         public Client recupClient(int num)
         {
-            MysqlDao sql = MysqlDao.getInstance("localhost", "banque", "root", "");
-            sql.openConnection();
             Client clt = sql.retourneClient(num);
             sql.FermeturedataReader();
-            sql.closeConnection();
 
             return clt;
 
@@ -92,19 +79,14 @@ namespace Banque.Controleur
 
         public int retourneIdClient(string nom)
         {
-            MysqlDao sql = MysqlDao.getInstance("localhost", "banque", "root", "");
-            sql.openConnection();
             int numeroClient = sql.retourneIdClient(nom);
             sql.FermeturedataReader();
-            sql.closeConnection();
             return numeroClient;
 
         }
 
         public void modifierAdresse(string adresse,int num)
         {
-            MysqlDao sql = MysqlDao.getInstance("localhost", "banque", "root", "");
-            sql.openConnection();
             sql.modificationAdresse(adresse,num);
             sql.FermeturedataReader();
             sql.closeConnection();

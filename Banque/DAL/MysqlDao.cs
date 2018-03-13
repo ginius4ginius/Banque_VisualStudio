@@ -92,6 +92,7 @@ namespace Banque.metier
 
         public MySqlDataReader recuperationDonnees()
         {
+            this.openConnection();
             try
             {
                 
@@ -110,6 +111,7 @@ namespace Banque.metier
 
         public DataTable affichageDonnee(MySqlDataReader dr)
         {
+            
             table = new DataTable();
 
             for (int i = 0; i <= dr.FieldCount - 1; i++)
@@ -139,10 +141,12 @@ namespace Banque.metier
         public void FermeturedataReader()
         {
             this.dr.Close();
+            this.closeConnection();
         }
 
         public void modificationAdresse(string adresse,int num)
         {
+            this.openConnection();
             string req = "update client set adresse = '"+adresse+"' where num  = " + num + ";";
             cmd = connect.reqExec(req);
             dr = cmd.ExecuteReader();
@@ -151,6 +155,7 @@ namespace Banque.metier
 
         public void modificationDecouvert(double id, double nbr)
         {
+            this.openConnection();
             try
             {
 
@@ -172,7 +177,7 @@ namespace Banque.metier
 
         public void debitCompte(double id, double nbr)
         {
-            
+            this.openConnection();
             try
             {
 
@@ -194,6 +199,7 @@ namespace Banque.metier
 
         public void creditCompte(double id, double nbr)
         {
+            this.openConnection();
             try
             {
 
@@ -216,6 +222,7 @@ namespace Banque.metier
 
         public Client retourneClient(int nbr)
         {
+            this.openConnection();
             string req = "select * from client where num =" + nbr + "";
             
             cmd = connect.reqExec(req);
@@ -229,6 +236,7 @@ namespace Banque.metier
 
         public int retourneIdClient(string nom)
         {
+            this.openConnection();
             string req = "select * from client where nom ='"+ nom +"'";
 
             cmd = connect.reqExec(req);
